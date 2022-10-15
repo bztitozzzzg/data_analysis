@@ -9,8 +9,11 @@
 複数回行う方法を交差検証と呼ぶ。
 """
 
+from cProfile import label
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
+import numpy as np
+import matplotlib.pyplot as plt
 
 # irisデータセットを読み込む
 iris = load_iris()
