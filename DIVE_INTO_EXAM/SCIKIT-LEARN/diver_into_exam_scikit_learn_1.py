@@ -1,3 +1,5 @@
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import StandardScaler
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import LabelEncoder
@@ -134,3 +136,28 @@ df = pd.DataFrame({
     'data2': [1000, 3000, 3500, 5000, 7000]
 })
 df
+scaler = StandardScaler()
+scaler.fit_transform(df)
+print(scaler.fit_transform(df))
+"""
+実行結果
+[[-1.41421356 -1.44280393]
+ [-0.70710678 -0.44776674]
+ [ 0.         -0.19900744]
+ [ 0.70710678  0.54727045]
+ [ 1.41421356  1.54230764]]
+"""
+
+print(end='\n')
+print('******最小最大正規化******')
+scaler = MinMaxScaler()
+scaler.fit_transform(df)
+print(scaler.fit_transform(df))
+"""
+実行結果
+[[0.         0.        ]
+ [0.25       0.33333333]
+ [0.5        0.41666667]
+ [0.75       0.66666667]
+ [1.         1.        ]]
+"""
