@@ -718,3 +718,27 @@ print(a.sum(), end="\n")
 実行結果
 3
 """
+
+print(end="\n\n")
+print("*** DIVE INTO EXAM 問12 ***", end="\n")
+a = np.array([[0, 1, 10], [0, 1, 10]])
+print(a.reshape(3, 2), end="\n\n")
+print(a, end="\n\n")
+b = np.array([[100], [100]])
+print(b, end="\n\n")
+c = np.concatenate([a, b], axis=1)
+print(c, end="\n\n")
+c = c.reshape(4, 2)
+print(c, end="\n\n")
+print(np.dot(c, b), end="\n\n")
+
+print("*** DIVE INTO EXAM 問19 ***", end="\n")
+A = np.array([[1, 3, 5]])
+print(A, end="\n\n")
+B = np.array([[6, 8, 10]])
+print(B, end="\n\n")
+C = np.concatenate([A, B], axis=0)
+print(C, end="\n\n")
+D = np.diff(C, axis=1)
+print(D, end="\n\n")
+print(np.sum(D))
